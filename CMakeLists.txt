@@ -18,7 +18,7 @@ find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 # include all components
 add_executable(BoostTest MACOSX_BUNDLE 
     main.cpp
-)
+        messages.cpp warnings.cpp handle_exceptions.cpp)
 
  # Link phread library
 TARGET_LINK_LIBRARIES(BoostTest pthread boost_unit_test_framework)

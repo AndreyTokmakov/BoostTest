@@ -5,6 +5,9 @@ The Boost Test unit-test framework/library study and experiments
 ./BoostTest --show_progress
 
 
+./BoostTest --log_level=all
+./BoostTest -l=all
+
 
 ./BoostTest –run_test=ExampleTestSuite/BoostWarnTest
 
