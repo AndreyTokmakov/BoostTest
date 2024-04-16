@@ -39,4 +39,6 @@ BOOST_FIXTURE_TEST_CASE(BoostCheckMessageTest, TestFixture)
     // Provide a test predicate (i.e. a conditional statement) that evaluates to
     // false to force the test to fail and will indicate a test failure with message.
     BOOST_CHECK_MESSAGE(false, "This should fail");
+
+    BOOST_TEST_MESSAGE( " * * ** no one sees this!" );
 }

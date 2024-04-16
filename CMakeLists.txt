@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(BoostTest)
 add_compile_options(-c -Wall -Werror -Wextra -O3 -std=c++2a)
 
+
 SET(PROJECT_VERSION 1.0.0.0)
 project(${PROJECT_NAME} VERSION ${PROJECT_VERSION} LANGUAGES CXX)
 
@@ -16,9 +17,9 @@ message (STATUS "BOOST VERSION: ${Boost_VERSION}")
 find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
 # include all components
-add_executable(BoostTest MACOSX_BUNDLE 
+add_executable(BoostTest MACOSX_BUNDLE
     main.cpp
-        messages.cpp warnings.cpp handle_exceptions.cpp)
+        messages.cpp warnings.cpp handle_exceptions.cpp fixtures_basic.cpp)
 
  # Link phread library
 TARGET_LINK_LIBRARIES(BoostTest pthread boost_unit_test_framework)
